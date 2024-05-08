@@ -32,12 +32,6 @@ public class GrondDetectie : MonoBehaviour
         Offset =  Cc.offset;
     }
 
-    // Update is called once per frameada
-    void Update()
-    {
-        
-    }
-
     public bool GrondCheck()
     {
         RaaktOndergrond = Physics2D.OverlapCircle((Vector2) transform.position + Offset , Radius + _grondCheckAfstand, gameObject.layer);
@@ -45,35 +39,14 @@ public class GrondDetectie : MonoBehaviour
         return RaaktOndergrond;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision != null) 
-        {
-            //print(collision.gameObject.name);
-            //_collision = collision;
-            //RaaktOndergrond = true;
-            //_speler._raaktOndergrond = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision != null)
-        {
-            //_collision = null;
-            //RaaktOndergrond = false;
-            //_speler._raaktOndergrond = false;
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        if(!Application.isPlaying) return;
-        if (RaaktOndergrond) Gizmos.color = Color.green;
-        else Gizmos.color = Color.red;
+    //private void OnDrawGizmos()
+    //{
+    //    if(!Application.isPlaying) return;
+    //    if (RaaktOndergrond) Gizmos.color = Color.green;
+    //    else Gizmos.color = Color.red;
 
         
-        Gizmos.DrawWireSphere( transform.position + (Vector3)Offset, Radius + _grondCheckAfstand);
+    //    Gizmos.DrawWireSphere( transform.position + (Vector3)Offset, Radius + _grondCheckAfstand);
 
-    }
+    //}
 }

@@ -80,8 +80,11 @@ public class Speler : MonoBehaviour
 
     private void Awake()//Maak singleton instance van Speler component
     {
-        if(_instance != null && _instance != this)  Destroy(this.gameObject);
-        else _instance = this;
+        if (_instance != null && _instance != this) Destroy(this.gameObject);
+        else
+        {
+            _instance = this;
+        } 
     }
 
     private void Start()
