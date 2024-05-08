@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance;
-    public static GameManager Instance { get { return _instance; } }
+    private static GameManager _instantie;
+    public static GameManager Instantie { get { return _instantie; } }
 
     private Speler _speler;
     // Start is called before the first frame update
