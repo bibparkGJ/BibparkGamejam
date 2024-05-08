@@ -11,13 +11,12 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Speler : MonoBehaviour
 {
-    private static Speler _instance;
-    public static Speler Instance { get { return _instance; } }
+    private static Speler _instantie;
+    public static Speler Instantie { get { return _instantie; } }
 
 
-    //[SerializeField]
-    [Range(0, 1)]
-    public float GrondCheckAfstand;
+    //[Range(0, 1)]
+    //public float GrondCheckAfstand;
     [SerializeField]
     private float _slopeCheckDistance;
     [SerializeField]
@@ -80,20 +79,17 @@ public class Speler : MonoBehaviour
 
     private void Awake()//Maak singleton instance van Speler component
     {
-        if (_instance != null && _instance != this) Destroy(this.gameObject);
+        if (_instantie != null && _instantie != this) Destroy(this.gameObject);
         else
         {
-            _instance = this;
+            _instantie = this;
         } 
     }
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        //_cc = GetComponent<CapsuleCollider2D>();
-        
-        //_capsuleColliderSize = _cc.size;
-        //_grondCheckRadius = _capsuleColliderSize.x/2 * GrondCheckAfstand;
+
         _startPos = transform.position;
         _startRot = transform.rotation.z;
 
@@ -127,10 +123,6 @@ public class Speler : MonoBehaviour
                 _raaktOndergrond = true;
             }
         }
-        
-        //_grondCheck.Invoke();
-        //_raaktOndergrond = Physics2D.OverlapCircle(_grondCheckLocatie.position + transform.up * _grondCheckRadius, _grondCheckRadius, _whatIsGround);
-
     }
 
     private void SpringCheck()

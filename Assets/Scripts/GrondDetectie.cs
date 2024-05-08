@@ -22,7 +22,7 @@ public class GrondDetectie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _speler = Speler.Instance;
+        _speler = Speler.Instantie;
         _speler._grondDetectieSensors.Add(this);
 
         Cc = this.GetComponent<CircleCollider2D>();

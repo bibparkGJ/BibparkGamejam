@@ -9,7 +9,7 @@ public class CenterOfMass : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _speler = Speler.Instance;
+        _speler = Speler.Instantie;
 
         Invoke("UpdateSpelerCOM",0.1f);
     }

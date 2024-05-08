@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,26 +9,31 @@ public class GameManager : MonoBehaviour
     public static GameManager Instantie { get { return _instantie; } }
 
     private Speler _speler;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _speler = Speler.Instance;
-    }
 
-    // Update is called once per frame
-    void Update()
+    public int Punten;
+
+    public UnityEvent NaPuntenAanpassing;
+
+    private void Awake()//Maak singleton instance van Speler component
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (_instantie != null && _instantie != this) Destroy(this.gameObject);
+        else
         {
-            _speler.Herstart();
+            _instantie = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
-    void CheckSpelerReference()
+    void Start()
+    {
+        CheckSpelerReference();
+    }
+
+    private void CheckSpelerReference()
     {
         if (!_speler)
         {
-            _speler = Speler.Instance;
+            _speler = Speler.Instantie;
             if (!_speler)
             {
                 Debug.Log("Speler Niet gevonden");
