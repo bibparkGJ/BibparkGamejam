@@ -39,6 +39,8 @@ public class Speler : MonoBehaviour
 
     [SerializeField]
     private bool _flipSpeler = false;
+    [SerializeField]
+    private bool _debug = false;
 
     [ShowOnly] public float _neerwaardseHellingsgraad;
 
@@ -156,23 +158,32 @@ public class Speler : MonoBehaviour
 
     private void HorizontaleHellingCheck(Vector2 checkPos)
     {
-        RaycastHit2D slopeHitFront = Physics2D.Raycast(checkPos, Vector2.left * _totaleKrachtVector.normalized, _slopeCheckDistance, _whatIsGround);
-        RaycastHit2D slopeHitBack = Physics2D.Raycast(checkPos, Vector2.right * _totaleKrachtVector.normalized, _slopeCheckDistance, _whatIsGround);
-        Debug.DrawRay(checkPos, transform.right * _slopeCheckDistance, Color.red);
-        Debug.DrawRay(checkPos, -transform.right * _slopeCheckDistance, Color.green);
+        RaycastHit2D slopeHitFront = Physics2D.Raycast(checkPos, -Vector2.Perpendicular(_totaleKrachtVector.normalized), _slopeCheckDistance, _whatIsGround);
+        RaycastHit2D slopeHitBack = Physics2D.Raycast(checkPos, Vector2.Perpendicular(_totaleKrachtVector.normalized), _slopeCheckDistance, _whatIsGround);
+
+        if (_debug)//toon raycasts voor slope detectie
+        {
+            if(slopeHitFront) Debug.DrawRay(checkPos, -Vector2.Perpendicular(_totaleKrachtVector.normalized) * slopeHitFront.distance, Color.white);
+            else Debug.DrawRay(checkPos, -Vector2.Perpendicular(_totaleKrachtVector.normalized) * _slopeCheckDistance, Color.red);
+
+            if(slopeHitBack) Debug.DrawRay(checkPos, Vector2.Perpendicular(_totaleKrachtVector.normalized) * slopeHitBack.distance, Color.white);
+            else Debug.DrawRay(checkPos, Vector2.Perpendicular(_totaleKrachtVector.normalized) * _slopeCheckDistance, Color.green);
+
+        }
+
 
         if (slopeHitFront)
         {
             _isOpHelling = true;
 
-            _zijwaardseHellingsgraad = Vector2.Angle(slopeHitFront.normal, _totaleKrachtVector.normalized * Vector2.down);
+            _zijwaardseHellingsgraad = Vector2.Angle(slopeHitFront.normal, -_totaleKrachtVector.normalized);
 
         }
         else if (slopeHitBack)
         {
             _isOpHelling = true;
 
-            _zijwaardseHellingsgraad = Vector2.Angle(slopeHitBack.normal, _totaleKrachtVector.normalized * Vector2.down);
+            _zijwaardseHellingsgraad = Vector2.Angle(slopeHitBack.normal, -_totaleKrachtVector.normalized);
         }
         else
         {

@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class LaadSceneViaNaam : MonoBehaviour
 {
     public string _levelNaam = "Menu_Levels";
+
+    private GameManager _gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _gameManager = GameManager.Instantie;
     }
 
     public void LaadLevel(float wachttijd = 0.1f)
@@ -26,6 +28,6 @@ public class LaadSceneViaNaam : MonoBehaviour
 
     private void LaadLevelNaWachttijd()
     {
-        SceneManager.LoadSceneAsync(_levelNaam);
+        _gameManager.LevelSwitch(_levelNaam);
     }
 }

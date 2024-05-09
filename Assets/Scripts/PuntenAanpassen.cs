@@ -14,19 +14,16 @@ public class PuntenAanpassen : MonoBehaviour
 
     public void VoegPuntenToe(int aantal)
     {
-        _gm.Punten += aantal;
-        _gm.NaPuntenAanpassing.Invoke();
+        _gm.PuntenAanpassing(_gm.Punten + aantal);
     }
 
     public void TrekPuntenAf(int aantal)
     {
-        _gm.Punten -= aantal;
-        _gm.NaPuntenAanpassing.Invoke();
+        _gm.PuntenAanpassing(_gm.Punten - aantal);
     }
 
     public void OverschrijfAantalPunten(int aantal)
     {
-        _gm.Punten = aantal;
-        _gm.NaPuntenAanpassing.Invoke();
+        _gm.PuntenAanpassing(aantal);
     }
 }
