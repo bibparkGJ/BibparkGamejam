@@ -34,11 +34,12 @@ public class Speler : MonoBehaviour
     [SerializeField]
     private PhysicsMaterial2D _spelerMetGrip;
 
-    [SerializeField]
-    [Range(0, 1)] private float _controleInLucht = 1;
 
     [SerializeField]
-    private bool _flipSpeler = false;
+    [Range(0, 1)] private float _luchtWeerstand = 0;
+
+    [SerializeField]
+    private bool _richtSpelerVolgensBeweging = false;
     [SerializeField]
     private bool _debug = false;
 
@@ -56,8 +57,11 @@ public class Speler : MonoBehaviour
     
     [ShowOnly] public bool _kanOpOndergrondBewegen;
     [ShowOnly] public bool _kanSpringen;
+    [ShowOnly] public bool _zweeft = false;
 
     [ShowOnly] public bool _gepauzeerd = false;
+
+    
 
     public Vector2 _nieuweSnelheid;
     public Vector2 _nieuweKracht { get; private set; }
@@ -76,7 +80,9 @@ public class Speler : MonoBehaviour
     private Vector2 _totaleKrachtVector;
 
     public List<GrondDetectie>  _grondDetectieSensors;
-    public List<GrondDetectie> _grondContacten; 
+    public List<GrondDetectie> _grondContacten;
+
+    private float _startZwaartekrachtSchaal;
 
 
     private void Awake()//Maak singleton instance van Speler component
@@ -95,6 +101,9 @@ public class Speler : MonoBehaviour
         _startPos = transform.position;
         _startRot = transform.rotation.z;
 
+
+
+        _startZwaartekrachtSchaal = _rb.gravityScale;
     }
 
     private void Update()
@@ -285,28 +294,36 @@ public class Speler : MonoBehaviour
         }
     }
 
-    public void PasBewegingToe(float bewegingSnelheid)
+    public void PasBewegingToe(Vector2 bewegingSnelheid)
     {
         if (_gepauzeerd) return;
+        _nieuweSnelheid = bewegingSnelheid;
 
         //print(bewegingSnelheid + " m/s and can move : " + _kanOpOndergrondBewegen);
         if (_raaktOndergrond && !_isInLancering && _kanOpOndergrondBewegen) //If on ground
         {
-            
-            _doetBeweging = true;
             if (_isOpHelling)
             {
-                _nieuweSnelheid = new Vector2(bewegingSnelheid * -_hellingLoodrechteVector.x, bewegingSnelheid * -_hellingLoodrechteVector.y);
+                _nieuweSnelheid = new Vector2(bewegingSnelheid.x * -_hellingLoodrechteVector.x, bewegingSnelheid.x * -_hellingLoodrechteVector.y);
             }
             else
             {
-                _nieuweSnelheid = new Vector2(bewegingSnelheid, 0);
+                _nieuweSnelheid = new Vector2(bewegingSnelheid.x, 0);
             }
+            _doetBeweging = true;
         }
         else if (!_raaktOndergrond) //If in air
         {
+
+            if (_zweeft)
+            {
+                _nieuweSnelheid = _rb.velocity * (1 - _luchtWeerstand) + bewegingSnelheid;
+            }
+            else
+            {
+                _nieuweSnelheid = _rb.velocity + bewegingSnelheid;
+            }
             _doetBeweging = true;
-            _nieuweSnelheid = new Vector2( _rb.velocity.x + bewegingSnelheid * _controleInLucht , _rb.velocity.y);
         }
     }
 
@@ -332,9 +349,24 @@ public class Speler : MonoBehaviour
         }
     }
 
+    public void BeginMetZweven()
+    {
+        ZwaartekrachtAanpassing(0);
+        _zweeft = true;
+    }
+    public void StopMetZweven()
+    {
+        ZwaartekrachtAanpassing(_startZwaartekrachtSchaal);
+        _zweeft = false;
+    }
+    private void ZwaartekrachtAanpassing(float schaal)
+    {
+        _rb.gravityScale = schaal;
+    }
+
     public void Flip()
     {
-        if (_gepauzeerd || !_flipSpeler) return;
+        if (_gepauzeerd || !_richtSpelerVolgensBeweging) return;
         _lichaamsRichting *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
@@ -353,5 +385,7 @@ public class Speler : MonoBehaviour
         _rb.simulated = true;
         _rb.totalForce = Vector2.zero;
         _gepauzeerd = false;
+
+        StopMetZweven();
     }
 }

@@ -21,6 +21,9 @@ public class HorizontaalBewegen : MonoBehaviour
     [Range(0.01f,100)]
     private float _maxVersnelling = 0.1f;
 
+    [SerializeField]
+    [Range(0, 1)] private float _controleInLucht = 0.05f;
+
 
     private Speler _speler;
     private GrondDetectie _gd;
@@ -45,7 +48,7 @@ public class HorizontaalBewegen : MonoBehaviour
 
     void BeweegHorizontaal()
     {
-        if (!_gd.RaaktOndergrond && _speler._raaktOndergrond) return;
+        if (!_gd.RaaktOndergrond && _speler._raaktOndergrond || _speler._zweeft) return;
 
         CheckSpelerRichting();
 
@@ -54,6 +57,8 @@ public class HorizontaalBewegen : MonoBehaviour
         if (_inputRichting != 0 )
         {
             float snelheid = _minimumSnelheid * _inputRichting;
+            Vector2 richting = Vector2.right;
+
             if (Mathf.Sign(_speler._nieuweSnelheid.x) == _inputRichting)
             {
                 snelheid = _speler._nieuweSnelheid.magnitude * _inputRichting;
@@ -73,14 +78,14 @@ public class HorizontaalBewegen : MonoBehaviour
             }
             else if (!_gd.RaaktOndergrond && !_speler._raaktOndergrond)//Bewegen in de lucht
             {
-                snelheid = _maximaleSnelheid * _inputRichting;
+                snelheid = _maximaleSnelheid * _inputRichting * _controleInLucht;
             }
 
 
 
 
             
-            _speler.PasBewegingToe(snelheid);
+            _speler.PasBewegingToe(snelheid * richting);
         }
     }
 
