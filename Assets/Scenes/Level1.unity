@@ -1876,6 +1876,22 @@ PrefabInstance:
       propertyPath: _controleInLucht
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 6780761530339331525, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7608900244599f4f8f54aec292f315d, type: 3}
+    - target: {fileID: 6780761530339331525, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780761530339331525, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780761530339331525, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7059714161871324824, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: _maximaleSnelheid
       value: 3
@@ -1891,6 +1907,14 @@ PrefabInstance:
     - target: {fileID: 7826388449108719299, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_Name
       value: wiel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978981880647541029, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978981880647541029, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9175702978422650909, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_Name
