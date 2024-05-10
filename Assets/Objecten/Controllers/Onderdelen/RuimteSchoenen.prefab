@@ -377,9 +377,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1631632988684341983, guid: 97f93d27e211e3742bc2494040e135b6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4696514504811342383}
-    - targetCorrespondingSourceObject: {fileID: 1631632988684341983, guid: 97f93d27e211e3742bc2494040e135b6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2397399167157393029}
   m_SourcePrefab: {fileID: 100100000, guid: 97f93d27e211e3742bc2494040e135b6, type: 3}
 --- !u!4 &1813536883687176146 stripped
@@ -392,20 +389,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1631632988684341983, guid: 97f93d27e211e3742bc2494040e135b6, type: 3}
   m_PrefabInstance: {fileID: 4037264947571498360}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4696514504811342383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3360677745858465703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc5b8981570f274a9e3995500a9cf74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RaaktOndergrond: 0
-  _grondCheckAfstand: 0.1
 --- !u!58 &2397399167157393029
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -427,13 +427,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.19245279
       objectReference: {fileID: 0}
+    - target: {fileID: 23075921006106146, guid: b3a828586ae432043831b8c05756e804, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2003542532933285233, guid: b3a828586ae432043831b8c05756e804, type: 3}
       propertyPath: m_LocalScale.x
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2003542532933285233, guid: b3a828586ae432043831b8c05756e804, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.65
+      value: 8.62
       objectReference: {fileID: 0}
     - target: {fileID: 2003542532933285233, guid: b3a828586ae432043831b8c05756e804, type: 3}
       propertyPath: m_LocalPosition.y
@@ -473,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3870098637345411355, guid: b3a828586ae432043831b8c05756e804, type: 3}
       propertyPath: m_Name
-      value: Vloer (1)
+      value: Dak
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -600,16 +604,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3975451399653616430, guid: 2cafda566e230cf42b3e3de2796e97a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.88706994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975451399653616430, guid: 2cafda566e230cf42b3e3de2796e97a9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.6581295
       objectReference: {fileID: 0}
     - target: {fileID: 3975451399653616430, guid: 2cafda566e230cf42b3e3de2796e97a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.57
+      value: 2.3135
       objectReference: {fileID: 0}
     - target: {fileID: 3975451399653616430, guid: 2cafda566e230cf42b3e3de2796e97a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8
+      value: -3.6787
       objectReference: {fileID: 0}
     - target: {fileID: 3975451399653616430, guid: 2cafda566e230cf42b3e3de2796e97a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1802,11 +1810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521237176037655101, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1630431343982961679, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717700903884502705, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1848,9 +1856,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1973254577783815176, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281779181920083665, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418833288633266832, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274014157324329215, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Name
+      value: SkateboardBeweging
+      objectReference: {fileID: 0}
     - target: {fileID: 6667404400403477181, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: _controleInLucht
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059714161871324824, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: _maximaleSnelheid
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671517031782036909, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: _springHoogte
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671517031782036909, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: _maximumSprongenInLucht
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826388449108719299, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Name
+      value: wiel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175702978422650909, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: m_Name
+      value: Wiel2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2355,11 +2399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1203830173101125792, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.15
+      value: 19.18
       objectReference: {fileID: 0}
     - target: {fileID: 1203830173101125792, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.03
+      value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 1203830173101125792, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
       propertyPath: m_LocalPosition.z
