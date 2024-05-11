@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TilemapTest.unity
     guid: 234e99183f3597144aa745200663be10
+  - enabled: 1
+    path: Assets/Scenes/level 1.unity
+    guid: eae5c8902bb25b54a9a0df7183206136
+  - enabled: 1
+    path: Assets/Scenes/level 2.unity
+    guid: 8dda8d5efa476bc439b58dad7c15a084
   m_configObjects: {}
