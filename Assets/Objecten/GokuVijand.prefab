@@ -694,6 +694,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3436925615380967237, guid: 758b409853d288643bdb6eaeec4abc68, type: 3}
+      propertyPath: m_Radius
+      value: 11.88
+      objectReference: {fileID: 0}
     - target: {fileID: 7033200617009127432, guid: 758b409853d288643bdb6eaeec4abc68, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.378699
