@@ -386,7 +386,7 @@ public class Speler : MonoBehaviour
         _rb.simulated = true;
         _rb.totalForce = Vector2.zero;
         _gepauzeerd = false;
-        _lichaamsRichting = 1
+        _lichaamsRichting = 1;
 
         StopMetZweven();
     }
