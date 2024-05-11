@@ -1808,14 +1808,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speler
       objectReference: {fileID: 0}
-    - target: {fileID: 1521237176037655101, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630431343982961679, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1717700903884502705, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1855,46 +1847,6 @@ PrefabInstance:
     - target: {fileID: 1717700903884502705, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973254577783815176, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281779181920083665, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5418833288633266832, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6274014157324329215, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_Name
-      value: SkateboardBeweging
-      objectReference: {fileID: 0}
-    - target: {fileID: 6667404400403477181, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: _controleInLucht
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 7059714161871324824, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: _maximaleSnelheid
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7671517031782036909, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: _springHoogte
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7671517031782036909, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: _maximumSprongenInLucht
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826388449108719299, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_Name
-      value: wiel1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175702978422650909, guid: c0061080212639a4eb64e944f1791226, type: 3}
-      propertyPath: m_Name
-      value: Wiel2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -304,6 +304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RuimteSchoenen
       objectReference: {fileID: 0}
+    - target: {fileID: 1631632988684341983, guid: 97f93d27e211e3742bc2494040e135b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2390783837402344106, guid: 97f93d27e211e3742bc2494040e135b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

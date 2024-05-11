@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7704561144660758182
 Transform:
   m_ObjectHideFlags: 0
@@ -299,7 +299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c93eb79ca8f6644909e72728e952c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grondCheckRadiusRatio: 0.95
   _slopeCheckDistance: 0.5
   _maximumHellingsgraad: 30
   _grondCheckLocatie: {fileID: 2833980563212632849}
@@ -311,7 +310,9 @@ MonoBehaviour:
     m_Bits: 1
   _spelerZonderGrip: {fileID: 6200000, guid: e9b7d26d727115c4da34454a2b3a3c38, type: 2}
   _spelerMetGrip: {fileID: 6200000, guid: c61f923ea64aad14f9eec2e129b0bd82, type: 2}
-  _controleInLucht: 0.02
+  _luchtWeerstand: 0
+  _richtSpelerVolgensBeweging: 0
+  _debug: 0
   _neerwaardseHellingsgraad: 0
   _zijwaardseHellingsgraad: 0
   _laatsteHellingsgraad: 0
@@ -322,7 +323,11 @@ MonoBehaviour:
   _doetBeweging: 0
   _kanOpOndergrondBewegen: 0
   _kanSpringen: 0
+  _zweeft: 0
+  _gepauzeerd: 0
   _nieuweSnelheid: {x: 0, y: 0}
+  _grondDetectieSensors: []
+  _grondContacten: []
 --- !u!114 &6665780600150470443
 MonoBehaviour:
   m_ObjectHideFlags: 0

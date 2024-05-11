@@ -14,7 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 661229542167379640, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663139998103129656, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
+      propertyPath: _controleInLucht
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413444707808189562, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
+      propertyPath: m_Name
+      value: SkateboardBeweging
       objectReference: {fileID: 0}
     - target: {fileID: 5446291230078482551, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54,6 +62,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5446291230078482551, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162703470361216152, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
+      propertyPath: m_Name
+      value: Wiel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119223979676191302, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
+      propertyPath: m_Name
+      value: wiel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522809396127631656, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
+      propertyPath: _springHoogte
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522809396127631656, guid: 7d923de253d9fd246ba7bd931ebc499c, type: 3}
+      propertyPath: _maximumSprongenInLucht
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -206,6 +230,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1717700903884502705}
     m_Modifications:
+    - target: {fileID: 3981934567796286706, guid: c750c8a2568c8ca4c814c57330bb08e1, type: 3}
+      propertyPath: _maximaleSnelheid
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7616439897502144949, guid: c750c8a2568c8ca4c814c57330bb08e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
