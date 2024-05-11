@@ -759,6 +759,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6667404400403477181, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: _maximaleSnelheid
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671517031782036909, guid: c0061080212639a4eb64e944f1791226, type: 3}
+      propertyPath: _springHoogte
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8653908728784415227, guid: c0061080212639a4eb64e944f1791226, type: 3}
       propertyPath: m_Color.b
       value: 0.045612313
