@@ -69,6 +69,19 @@ public class Zweven : MonoBehaviour
         {
             snelheid = _maximaleSnelheid * _inputRichting;
         }
+        CheckSpelerRichting();
         _speler.PasBewegingToe(snelheid);
+    }
+
+    void CheckSpelerRichting()
+    {
+        if (_inputRichting.x == 1 && _speler._lichaamsRichting == -1)
+        {
+            _speler.Flip();
+        }
+        else if (_inputRichting.x == -1 && _speler._lichaamsRichting == 1)
+        {
+            _speler.Flip();
+        }
     }
 }
