@@ -74,6 +74,7 @@ public class Speler : MonoBehaviour
 
     private Vector2 _startPos;
     private float _startRot;
+    private Vector2 _startScale;
 
     private Vector2 _totaleKrachtVector;
 
@@ -98,7 +99,7 @@ public class Speler : MonoBehaviour
 
         _startPos = transform.position;
         _startRot = transform.rotation.z;
-
+        _startScale = transform.localScale;
 
 
         _startZwaartekrachtSchaal = _rb.gravityScale;
@@ -379,7 +380,9 @@ public class Speler : MonoBehaviour
         _rb.simulated = false;
         //_rb.MovePosition(_startPos);
         gameObject.transform.SetPositionAndRotation(_startPos, Quaternion.AngleAxis(_startRot, Vector3.forward));
-        
+        gameObject.transform.localScale = _startScale;
+
+
         _rb.simulated = true;
         _rb.totalForce = Vector2.zero;
         _gepauzeerd = false;
