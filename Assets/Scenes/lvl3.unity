@@ -4949,19 +4949,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3010286162757782606, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
       propertyPath: _levelNaam
-      value: lvl2
+      value: Level4
       objectReference: {fileID: 0}
     - target: {fileID: 5150813270970026455, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5150813270970026455, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
       propertyPath: m_Color.g
-      value: 0.9992725
+      value: 0.46299243
       objectReference: {fileID: 0}
     - target: {fileID: 5150813270970026455, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8908793914794822836, guid: 892dcb8e9894ecc428602b626c08e3d2, type: 3}
