@@ -8,6 +8,8 @@ public class SpelerBijObject : MonoBehaviour
 {
     private Speler _speler;
 
+    public bool IsActief = true;
+
     public UnityEvent OpMomentVanAankomst;
 
 
@@ -19,6 +21,7 @@ public class SpelerBijObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!IsActief) return;
         if (collision.gameObject == _speler.gameObject) 
         { 
             OpMomentVanAankomst.Invoke();
@@ -27,9 +30,15 @@ public class SpelerBijObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!IsActief) return;
         if (collision.gameObject == _speler.gameObject)
         {
             OpMomentVanAankomst.Invoke();
         }
+    }
+
+    public void ZetActief(bool status)
+    {
+        IsActief = status;
     }
 }
