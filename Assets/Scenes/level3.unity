@@ -442,6 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea38de4e0a666c46b57289be8fd78c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsActief: 1
   OpMomentVanAankomst:
     m_PersistentCalls:
       m_Calls:
@@ -1405,13 +1406,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318883891}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.005097767, w: 0.999987}
   m_LocalPosition: {x: -0.01, y: 0.1342, z: 0}
   m_LocalScale: {x: -0.3944777, y: 0.4815551, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1616642914}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.584}
 --- !u!1 &1385536139
 GameObject:
   m_ObjectHideFlags: 0
