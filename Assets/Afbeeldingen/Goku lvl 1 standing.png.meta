@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Afbeeldingen/Tilemap2.png.meta
-guid: dcb650e9c6bae0a478664c9fe73f3780
-========
-guid: fa645b5971535e24ab8004f34ed374cc
->>>>>>>> ab6f2bbdffc3af4e2fa24c5a8f945d25fdc74556:Assets/Afbeeldingen/Chicken game.png.meta
+guid: 65b40ebd248755c489b096549793005e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

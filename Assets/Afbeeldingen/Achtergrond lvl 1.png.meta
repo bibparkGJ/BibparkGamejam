@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Afbeeldingen/Tilemap2.png.meta
-guid: dcb650e9c6bae0a478664c9fe73f3780
-========
-guid: fa645b5971535e24ab8004f34ed374cc
->>>>>>>> ab6f2bbdffc3af4e2fa24c5a8f945d25fdc74556:Assets/Afbeeldingen/Chicken game.png.meta
+guid: bdb2953d6ab19f343bb8c7a8a8baf3cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -52,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 108
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
