@@ -3699,6 +3699,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1486701368270277028, guid: b508f2ea7513ea640a6c2ed971ee9419, type: 3}
+      propertyPath: m_Radius
+      value: 18.63
+      objectReference: {fileID: 0}
     - target: {fileID: 4804095171229241790, guid: b508f2ea7513ea640a6c2ed971ee9419, type: 3}
       propertyPath: _object
       value: 
@@ -3706,6 +3710,14 @@ PrefabInstance:
     - target: {fileID: 4804095171229241790, guid: b508f2ea7513ea640a6c2ed971ee9419, type: 3}
       propertyPath: _secondenTussenSpawns
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523824793946179305, guid: b508f2ea7513ea640a6c2ed971ee9419, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523824793946179305, guid: b508f2ea7513ea640a6c2ed971ee9419, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6691398011538493600, guid: b508f2ea7513ea640a6c2ed971ee9419, type: 3}
       propertyPath: VoorIkVernietigdWordt.m_PersistentCalls.m_Calls.Array.size
