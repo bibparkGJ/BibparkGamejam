@@ -24,10 +24,8 @@ public class Speler : MonoBehaviour
     [SerializeField]
     private Transform _grondCheckLocatie;
     [SerializeField]
-    private LayerMask _whatIsGround;
+    public LayerMask GrondLaag;
 
-    [SerializeField]
-    private LayerMask _muurLayer;
 
     [SerializeField]
     private PhysicsMaterial2D _spelerZonderGrip;
@@ -167,8 +165,8 @@ public class Speler : MonoBehaviour
 
     private void HorizontaleHellingCheck(Vector2 checkPos)
     {
-        RaycastHit2D slopeHitFront = Physics2D.Raycast(checkPos, -Vector2.Perpendicular(_totaleKrachtVector.normalized), _slopeCheckDistance, _whatIsGround);
-        RaycastHit2D slopeHitBack = Physics2D.Raycast(checkPos, Vector2.Perpendicular(_totaleKrachtVector.normalized), _slopeCheckDistance, _whatIsGround);
+        RaycastHit2D slopeHitFront = Physics2D.Raycast(checkPos, -Vector2.Perpendicular(_totaleKrachtVector.normalized), _slopeCheckDistance, GrondLaag);
+        RaycastHit2D slopeHitBack = Physics2D.Raycast(checkPos, Vector2.Perpendicular(_totaleKrachtVector.normalized), _slopeCheckDistance, GrondLaag);
 
         if (_debug)//toon raycasts voor slope detectie
         {
@@ -192,7 +190,7 @@ public class Speler : MonoBehaviour
         {
             _isOpHelling = true;
 
-            _zijwaardseHellingsgraad = Vector2.Angle(slopeHitBack.normal, -_totaleKrachtVector.normalized);
+            _zijwaardseHellingsgraad = Vector2.Angle(slopeHitBack.normal, -_totaleKrachtVector.normalized) ;
         }
         else
         {
@@ -204,7 +202,7 @@ public class Speler : MonoBehaviour
 
     private void VerticaleHellingCheck(Vector2 checkPos)
     {
-        RaycastHit2D hit = Physics2D.Raycast(checkPos, _totaleKrachtVector.normalized, _slopeCheckDistance, _whatIsGround);
+        RaycastHit2D hit = Physics2D.Raycast(checkPos, _totaleKrachtVector.normalized, _slopeCheckDistance, GrondLaag);
 
         if (hit)
         {
