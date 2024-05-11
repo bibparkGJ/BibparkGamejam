@@ -21,7 +21,7 @@ public class EventBijSnelheidThreshhold : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
 
-        CheckSnelheid();
+        if (_rb.velocity.magnitude > _SnelheidThreshold) _onderSnelheidThreshold = false;
     }
 
     // Update is called once per frame
