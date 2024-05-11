@@ -17,13 +17,14 @@ public class LaadSceneViaNaam : MonoBehaviour
 
     public void LaadLevel(float wachttijd = 0.1f)
     {
-        if (SceneManager.GetSceneByName(_levelNaam).IsValid())
-        {
-            Invoke("LaadLevelNaWachttijd", wachttijd);
-        }
-        else {
-            print(_levelNaam + " scene niet gevonden!");
-        }
+        Invoke("LaadLevelNaWachttijd", wachttijd);
+        //if (SceneManager.GetSceneByName(_levelNaam).IsValid())
+        //{
+            
+        //}
+        //else {
+        //    print(_levelNaam + " scene niet gevonden!");
+        //}
     }
 
     private void LaadLevelNaWachttijd()
